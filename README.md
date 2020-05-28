@@ -12,6 +12,15 @@ cat filename.txt | grep -v "text"
 
 ---
 
+### Git workflow
+
+Reset repository. Removes even ignored files which means it's gonna leave you with completely fresh-like repository.
+```
+git clean -fdx
+```
+
+---
+
 ### Git Workflow (commit)
 
 Undo commit
@@ -76,4 +85,15 @@ git stash pop
 git add . && git commit -am 'WIP'
 git stash pop
 git reset --soft HEAD^
+```
+
+---
+
+### Git Workflow (gitignore)
+
+Untrack files already added to git repository based on .gitignore
+```
+git rm -r --cached .
+git add .
+git commit -m ".gitignore fix"
 ```
