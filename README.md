@@ -28,6 +28,12 @@ Undo commit
 git reset HEAD^
 ```
 
+Remove latest commit from master
+```
+git reset HEAD^ --hard
+git push origin -f
+```
+
 Rename commit that was not yet pushed to server
 ```
 git commit --amend
