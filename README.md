@@ -1,3 +1,22 @@
+### youtube-dl
+
+Get single YouTube video
+```
+youtube-dl -f "[ext=mp4][height<=720]" <video-id>
+```
+
+Get Udemy course with autonumber (or without it)
+```
+youtube-dl --cookies ./cookies.txt https://www.udemy.com/<course_name>/ -o "./%(playlist)s/%(chapter_number)s-%(chapter)s/%(autonumber)03d-%(title)s.%(ext)s"
+
+youtube-dl --cookies ./cookies.txt https://www.udemy.com/<course_name>/ -o "./%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s"
+```
+
+Resume YouTube / Udemy downloading starting from particular index
+```
+youtube-dl -f "[ext=mp4][height<=720]" https://www.youtube.com/user/<channel>/videos --playlist-start=72
+```
+
 ### grep
 
 Zwraca linie w których znajduje się "text". Case sensitive.
