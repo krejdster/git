@@ -1,3 +1,12 @@
+### fdupes
+
+Remove duplicate files
+```
+$ sudo apt-get install fdupes
+$ brew install fdupes
+fdupes -rdN dir/
+```
+
 ### youtube-dl
 
 Get single YouTube video
