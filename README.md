@@ -5,6 +5,11 @@ Get single YouTube video
 youtube-dl -f "[ext=mp4][height<=720]" <video-id>
 ```
 
+Get MAX 720p video
+```
+youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' <video-id>
+```
+
 Get Udemy course with autonumber (or without it)
 ```
 youtube-dl --cookies ./cookies.txt https://www.udemy.com/<course_name>/ -o "./%(playlist)s/%(chapter_number)s-%(chapter)s/%(autonumber)03d-%(title)s.%(ext)s"
