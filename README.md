@@ -5,9 +5,18 @@ Get single YouTube video
 youtube-dl -f "[ext=mp4][height<=720]" <video-id>
 ```
 
-Get MAX 720p video
+Get preferred - 720p, name with date prefix, subs
 ```
-youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' <video-id>
+youtube-dl \
+--format 'bestvideo[height<=720]+bestaudio/best[height<=720]' \
+--retries '3' \
+--write-info-json \
+--write-thumbnail \
+--all-subs \
+--convert-subs 'srt' \
+--embed-subs \
+--output "%(upload_date)s_%(id)s_%(title)s.%(ext)s" \
+'CHANNEL_URL'
 ```
 
 Get Udemy course with autonumber (or without it)
