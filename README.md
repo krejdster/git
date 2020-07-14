@@ -117,6 +117,11 @@ Stash apply force
 git stash show -p | git apply --3
 ```
 
+Preview zawartość Stasha
+```
+git stash show -p stash@{2}
+```
+
 Zapisz pliki włącznie ze staged:
 ```
 git stash save --keep-index
