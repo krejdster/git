@@ -90,6 +90,12 @@ Add new files / updated files to already pushed commit
 5. git push --force
 ```
 
+Merge two last commits into one
+```
+$ git rebase -i HEAD~2
+> You should see two lines starting with "pick". To proceed with squashing, change the first word of the second line from "pick" to "squash". Then save your file, and quit. Git will squash your first commit into your second last commit.
+```
+
 ---
 
 ### Git Workflow (cherry picking)
