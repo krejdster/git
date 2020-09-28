@@ -130,7 +130,10 @@ git diff --cached
 Stash apply force
 ```
 git stash show -p | git apply --3
+or
+git checkout stash -- . (this one is dangerous as it overrides everything you got in stash in your working tree)
 ```
+
 
 Preview zawartość Stasha
 ```
