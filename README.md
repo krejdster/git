@@ -63,6 +63,15 @@ git clean -fdx
 
 ---
 
+### Git Workflow (branches)
+
+Create a branch based on another branch
+```
+git checkout -b myFeature development
+```
+
+---
+
 ### Git Workflow (commit)
 
 Undo commit
