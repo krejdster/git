@@ -93,6 +93,7 @@ git push origin -f
 Rename commit that was not yet pushed to server
 ```
 git commit --amend
+git commit --amend --author="Your Name <email@gmail.org>"
 ```
 
 Add new files / updated files to already pushed commit
