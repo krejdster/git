@@ -70,6 +70,11 @@ Create a branch based on another branch
 git checkout -b myFeature development
 ```
 
+Force push it to another branch
+```
+git push origin myLocalBranch:myTargetBranchOnRemote --force
+```
+
 ---
 
 ### Git Workflow (commit)
