@@ -19,6 +19,7 @@ Get preferred - 720p, name with date prefix, subs
 youtube-dl \
 --format 'bestvideo[height<=720]+bestaudio/best[height<=720]' \
 --retries '3' \
+--rate-limit 10240k \
 --write-info-json \
 --write-thumbnail \
 --all-subs \
