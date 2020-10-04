@@ -30,14 +30,21 @@ youtube-dl \
 
 Get Udemy course with autonumber (or without it)
 ```
-youtube-dl --cookies ./cookies.txt https://www.udemy.com/<course_name>/ -o "./%(playlist)s/%(chapter_number)s-%(chapter)s/%(autonumber)03d-%(title)s.%(ext)s"
+youtube-dl --cookies ./cookies.txt https://www.udemy.com/zzzCOURSE_NAMEzzz/ -o "./%(playlist)s/%(chapter_number)s-%(chapter)s/%(autonumber)03d-%(title)s.%(ext)s"
 
-youtube-dl --cookies ./cookies.txt https://www.udemy.com/<course_name>/ -o "./%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s"
+youtube-dl --cookies ./cookies.txt https://www.udemy.com/zzzCOURSE_NAMEzzz/ -o "./%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s"
 ```
 
 Resume YouTube / Udemy downloading starting from particular index
 ```
-youtube-dl -f "[ext=mp4][height<=720]" https://www.youtube.com/user/<channel>/videos --playlist-start=72
+youtube-dl -f "[ext=mp4][height<=720]" https://www.youtube.com/user/zzzCHANNEL_NAMEzzz/videos --playlist-start=72
+```
+
+### tiktok
+
+Get single profile, latest 50 videos in HD without watermark, up to 3 concurrent downloads, save metadata to CSV files and keep download history so there is no need to redownload history
+```
+tiktok-scraper user zzzUSERNAMEzzz --download --hd --noWaterMark --asyncDownload 3 --filetype csv --number 50 --store --historypath ./
 ```
 
 ### grep
