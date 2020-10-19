@@ -7,6 +7,13 @@ $ brew install fdupes
 fdupes -rdN dir/
 ```
 
+### sips
+
+Resize JPG files (Mac Terminal) - resizes all JPG files in the current directory
+```
+sips -Z 3000 *.JPG
+```
+
 ### youtube-dl
 
 Get single YouTube video
