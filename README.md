@@ -14,10 +14,10 @@ fdupes -rdN dir/
 sips -Z 3000 *.JPG
 ```
 
-**exiftool** Remove all EXIF data from all files, include subdirectories starting from the top folder
+**exiftool** Remove all EXIF data from all files (DOES NOT recompress the image), include subdirectories starting from the top folder
 ```
 brew install exiftool
-exiftool -r -all= *.jpg
+exiftool -r -all= *
 ```
 
 ### youtube-dl
