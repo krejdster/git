@@ -7,11 +7,17 @@ $ brew install fdupes
 fdupes -rdN dir/
 ```
 
-### sips
+### JPEG / JPG / Image operations
 
-Resize JPG files (Mac Terminal) - resizes all JPG files in the current directory
+**SIPS** Resize JPG files (Mac Terminal) - resizes all JPG files in the current directory
 ```
 sips -Z 3000 *.JPG
+```
+
+**exiftool** Remove all EXIF data from all files, include subdirectories starting from the top folder
+```
+brew install exiftool
+exiftool -r -all= *.jpg
 ```
 
 ### youtube-dl
