@@ -17,7 +17,8 @@ sips -Z 3000 *.JPG
 **exiftool** Remove all EXIF data from all files (DOES NOT recompress the image), include subdirectories starting from the top folder
 ```
 brew install exiftool
-exiftool -r -all= *
+exiftool -overwrite_original -r -all= *
+# or without overwrite flag
 find . type f -name '*.JPG_original' -delete
 ```
 
