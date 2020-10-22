@@ -18,6 +18,7 @@ sips -Z 3000 *.JPG
 ```
 brew install exiftool
 exiftool -r -all= *
+find . type f -name '*.JPG_original' -delete
 ```
 
 ### youtube-dl
