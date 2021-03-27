@@ -199,3 +199,15 @@ git rm -r --cached .
 git add .
 git commit -m ".gitignore fix"
 ```
+
+---
+
+### ffmpeg
+
+convert MOV to MP4
+```
+for file in *.mov; do
+	FNAME="$(cut -d'.' -f1 <<<"$file")"
+	ffmpeg -i "$file" -vcodec h264 -an "$FNAME.mp4"
+done
+```
