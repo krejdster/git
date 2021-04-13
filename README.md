@@ -4,7 +4,8 @@ Remove duplicate files
 ```
 $ sudo apt-get install fdupes
 $ brew install fdupes
-fdupes -rdN dir/
+fdupes -rdN ./dir/
+fdupes -r ./dir/ --- DRY RUN
 ```
 
 ### JPEG / JPG / Image operations
