@@ -15,6 +15,16 @@ fdupes -r ./dir/ --- DRY RUN
 sips -Z 3000 *.JPG
 ```
 
+**All PNG in directory to JPEG; remove all PNG from directory**
+```
+for i in *.png; do sips -s format jpeg -s formatOptions 80 "$i" -o "$i.jpg"; done && rm -rf ./*.png
+```
+
+**Downsize all JPG in the directory by replacing**
+```
+for i in *.jpg; do sips -s format jpeg -s formatOptions 75 --resampleWidth 1800 "$i" -o "$i"; done
+```
+
 **exiftool** Remove all EXIF data from all files (DOES NOT recompress the image), include subdirectories starting from the top folder
 ```
 brew install exiftool
