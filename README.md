@@ -228,3 +228,41 @@ for file in *.mov; do
 	ffmpeg -i "$file" -vcodec h264 -an "$FNAME.mp4"
 done
 ```
+
+---
+
+### Change / add filename extension
+
+Add extension
+```
+for f in *; do mv "$f" "$f.jpg"; done
+```
+
+Change extension
+```
+for file in *.html
+do
+  mv "$file" "${file%.html}.txt"
+done
+
+```
+
+Strip .jpg from all filenames
+```
+for f in *.jpg; do mv "$f" "${f%.jpg}"; done
+```
+
+Add .jpg to all filenames (even those with .jpg already)
+```
+for f in *; do mv "$f" "$f.jpg"; done
+```
+
+Add .jpg to all filenames...unless they are already .jpg
+```
+for f in *; do case "$f" in *.jpg) echo skipped $f;; *) mv "$f" "$f".jpg; esac; done
+```
+
+Add .jpg to all filenames...unless they already have a . extension
+```
+for f in *; do case "$f" in *.*) echo skipped $f;; *) mv "$f" "$f".jpg; esac; done
+```
