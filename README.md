@@ -110,6 +110,12 @@ Create a branch based on another branch
 git checkout -b myFeature development
 ```
 
+Copy current branch (This will give you a new branch "new_branch" with the same state as "old_branch")
+```
+git checkout old_branch
+git branch new_branch
+```
+
 Force push it to another branch
 ```
 git push origin myLocalBranch:myTargetBranchOnRemote --force
